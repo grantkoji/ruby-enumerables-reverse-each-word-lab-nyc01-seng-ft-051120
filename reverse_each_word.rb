@@ -1,19 +1,8 @@
-require 'pry'
 
-#def reverse_each_word(string)
-#  string_array = string.split(' ')
-#  reversed_array = []
-#  string_array.each do |words|
-#    reversed_array << words.reverse
-#  end
-#  reversed_array.join(' ')
-#end
 
-def reverse_each_word(string)
-  string_array = string.split(' ')
-  reversed_array = []
-    string_array.collect do |words|
-      reversed_array << words.reverse
-    end
-  reversed_array.join(' ')
+def reverse_each_word(sentence)
+  array_sentence = sentence.to_a
+  array_reversed = []
+    array_sentence.map {|word| array_reversed << word.reverse}
+  array_reversed.to_s
 end
